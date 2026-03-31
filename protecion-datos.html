@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protección de Datos | Asociacion Colonias Felinas de Alhendin Bigotes Solidarios</title>
+  <meta name="description" content="Política de protección de datos de la Asociacion Colonias Felinas de Alhendin Bigotes Solidarios, CIF G21862370." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #F7EDE9;
+      --card-bg:     #FFFCFA;
+      --card-border: #E5E0DF;
+      --text:        #3a3a3a;
+      --text-muted:  rgba(58,58,58,0.62);
+      --heading:     #007d99;
+      --accent:      #faa1a1;
+      --accent-red:  #f53d3d;
+      --terra:       #C9907C;
+      --brown:       #835E54;
+      --neutral:     #B3BDB5;
+      --font-body:   'Open Sans', Arial, sans-serif;
+      --font-head:   'Crimson Pro', Georgia, serif;
+      --radius:      0.6em;
+      --shadow:      0 0.25em 0.375em -0.0625em rgba(0,0,0,.10), 0 0.0625em 0 0.0625em #E5E0DF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent-red); }
+    a:hover { color: #f76e6e; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; cursor: pointer; border: 0; background: none; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: #C9907C;
+      padding: 0 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9em;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.15);
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2.2vw, 1.35rem);
+      font-weight: 700;
+      line-height: 1.1;
+      max-width: 22ch;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      padding: 0.5em 1.1em;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      border-radius: 999px;
+      color: #fff;
+      font-size: 0.88em;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 180ms ease;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.18); color: #fff; }
+    .back-btn svg { width: 14px; height: 14px; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--bg);
+      padding: clamp(2.5rem, 6vw, 5rem) 2em 0;
+    }
+
+    .hero-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6em;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      background: #fccfcf;
+      color: #c0374b;
+      font-size: 0.72em;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.35em 0.8em;
+      border-radius: 999px;
+      width: fit-content;
+    }
+
+    .hero-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--heading);
+      text-wrap: balance;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 60ch;
+    }
+
+    .id-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 0.5em 1em;
+      font-size: 0.88em;
+      color: var(--text);
+      width: fit-content;
+      margin-top: 0.4em;
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    }
+
+    .id-pill strong { color: var(--terra); }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 2em 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* ── CONTENT CARD ── */
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(1.6rem, 4vw, 2.8rem);
+      margin-top: 2rem;
+    }
+
+    .section-block + .section-block {
+      margin-top: 2.4rem;
+      padding-top: 2.4rem;
+      border-top: 1px solid #ede7e4;
+    }
+
+    .section-block h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 0.8rem;
+      line-height: 1.15;
+    }
+
+    .section-block p {
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      max-width: 72ch;
+    }
+
+    .section-block p:last-child { margin-bottom: 0; }
+
+    .section-block ul,
+    .section-block ol {
+      padding-left: 1.3rem;
+      margin-top: 0.5rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      max-width: 70ch;
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: #C9907C;
+      padding: 1.4em 2em;
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 0.85em;
+      color: #fff;
+      letter-spacing: 0.04em;
+    }
+
+    .site-footer a { color: #fff; opacity: 0.9; text-underline-offset: 3px; }
+    .site-footer a:hover { opacity: 1; color: #fff; }
+
+    @media (max-width: 600px) {
+      .topbar { flex-direction: column; align-items: flex-start; padding: 1em; gap: 0.7em; }
+      .hero, .page-wrap { padding-left: 1em; padding-right: 1em; }
+      .content-card { border-radius: 0.4em; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <a class="brand" href="./index.html" aria-label="Volver a la web de la asociación">
+      <img
+        class="brand-logo"
+        src="https://cdn.gamma.app/po8ncw3ays2d4w9/4a5e7c703655494c8ed2633027fa3328/original/generated-image.png"
+        alt="Logo Colonias Felinas de Alhendin Bigotes Solidarios"
+        width="52" height="52" loading="eager"
+      />
+      <span class="brand-name">Colonias Felinas de Alhendin<br>Bigotes Solidarios</span>
+    </a>
+    <a class="back-btn" href="./index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      Volver a la web
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Encabezado de protección de datos">
+    <div class="hero-inner">
+      <span class="eyebrow">Transparencia · RGPD · LOPDGDD</span>
+      <h1 class="hero-title">Protección de datos personales</h1>
+      <p class="hero-sub">Información sobre el tratamiento de los datos personales que facilitas a través de esta web, conforme al Reglamento (UE) 2016/679 y la Ley Orgánica 3/2018.</p>
+      <div class="id-pill">
+        <strong>Asociacion Colonias Felinas de Alhendin Bigotes Solidarios</strong>
+        &nbsp;·&nbsp; CIF G21862370
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main id="contenido" class="page-wrap">
+    <article class="content-card">
+
+      <div class="section-block">
+        <h2>1. Responsable del tratamiento</h2>
+        <p>En cumplimiento del Reglamento (UE) 2016/679, General de Protección de Datos (RGPD), y de la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), le informamos de que los datos personales facilitados a través de este sitio web serán tratados por:</p>
+        <ul>
+          <li><strong>Entidad:</strong> Asociacion Colonias Felinas de Alhendin Bigotes Solidarios.</li>
+          <li><strong>CIF:</strong> G21862370.</li>
+          <li><strong>Sitio web:</strong> https://www.bigotessolidariosalhendin.org</li>
+        </ul>
+      </div>
+
+      <div class="section-block">
+        <h2>2. Finalidad del tratamiento</h2>
+        <p>Los datos personales que facilite mediante los canales habilitados en esta web podrán tratarse con las siguientes finalidades:</p>
+        <ul>
+          <li>Atender consultas, solicitudes de información y comunicaciones dirigidas a la asociación.</li>
+          <li>Gestionar el alta de personas voluntarias, colaboradoras, socias, madrinas o padrinos de colonias.</li>
+          <li>Tramitar procesos relacionados con adopciones, acogidas y campañas solidarias de protección animal.</li>
+          <li>Enviar comunicaciones informativas sobre la actividad de la asociación, cuando exista base jurídica suficiente.</li>
+        </ul>
+      </div>
+
+      <div class="section-block">
+        <h2>3. Base jurídica</h2>
+        <p>El tratamiento de los datos personales se sustenta, según cada caso, en alguna de las siguientes bases jurídicas:</p>
+        <ul>
+          <li>El <strong>consentimiento</strong> de la persona interesada al remitir un formulario o aceptar comunicaciones.</li>
+          <li>La <strong>ejecución</strong> de una relación precontractual o asociativa.</li>
+          <li>El cumplimiento de <strong>obligaciones legales</strong> aplicables a la entidad.</li>
+          <li>El <strong>interés legítimo</strong> de la asociación para la gestión interna y la seguridad del sitio web.</li>
+        </ul>
+      </div>
+
+      <div class="section-block">
+        <h2>4. Categorías de datos tratados</h2>
+        <p>Los datos tratados podrán incluir nombre y apellidos, correo electrónico, teléfono de contacto y cualquier otra información que la persona usuaria facilite voluntariamente al contactar con la asociación. No se recabarán categorías especiales de datos salvo que resulte imprescindible y exista legitimación legal suficiente.</p>
+      </div>
+
+      <div class="section-block">
+        <h2>5. Plazo de conservación</h2>
+        <p>Los datos se conservarán mientras sean necesarios para la finalidad para la que fueron recabados y, posteriormente, durante los plazos legalmente exigibles para atender posibles responsabilidades. Cuando el tratamiento se base en el consentimiento, los datos se suprimirán una vez retirado o solicitada su eliminación por la persona interesada.</p>
+      </div>
+
+      <div class="section-block">
+        <h2>6. Destinatarios y comunicación de datos</h2>
+        <p>Con carácter general, los datos personales no se cederán a terceros salvo obligación legal o cuando sea necesario para la prestación de servicios relacionados con el funcionamiento del sitio web o la actividad de la asociación, en cuyo caso los proveedores actuarán como encargados del tratamiento con las garantías legales exigibles.</p>
+      </div>
+
+      <div class="section-block">
+        <h2>7. Derechos de las personas interesadas</h2>
+        <p>Cualquier persona puede ejercer, cuando proceda, los siguientes derechos:</p>
+        <ul>
+          <li><strong>Acceso</strong> a sus datos personales.</li>
+          <li><strong>Rectificación</strong> de datos inexactos o incompletos.</li>
+          <li><strong>Supresión</strong> de los datos cuando ya no sean necesarios.</li>
+          <li><strong>Oposición</strong> al tratamiento en determinadas circunstancias.</li>
+          <li><strong>Limitación</strong> del tratamiento mientras se resuelve una reclamación.</li>
+          <li><strong>Portabilidad</strong> de los datos en formato estructurado.</li>
+          <li><strong>Retirada del consentimiento</strong> en cualquier momento, sin que ello afecte a la licitud del tratamiento anterior.</li>
+        </ul>
+        <p>Para ejercer estos derechos, puede ponerse en contacto con la asociación a través de los canales disponibles en esta web. Asimismo, tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (www.aepd.es).</p>
+      </div>
+
+      <div class="section-block">
+        <h2>8. Seguridad</h2>
+        <p>La asociación aplica las medidas técnicas y organizativas razonables para proteger los datos frente a accesos no autorizados, pérdidas, alteraciones o tratamientos indebidos, teniendo en cuenta la naturaleza de la información tratada y los riesgos existentes.</p>
+      </div>
+
+      <div class="section-block">
+        <h2>9. Menores de edad</h2>
+        <p>Este sitio web no está dirigido específicamente a menores de edad. En caso de recogida de datos de menores, se aplicarán los requisitos y garantías reforzadas que establece la normativa vigente.</p>
+      </div>
+
+      <div class="section-block">
+        <h2>10. Actualización de esta política</h2>
+        <p>Esta política de protección de datos podrá actualizarse cuando resulte necesario para adaptarla a cambios normativos o a modificaciones en el funcionamiento del sitio web.</p>
+        <p><strong>Fecha de última actualización:</strong> 31 de marzo de 2026.</p>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <span>© 2026 Asociacion Colonias Felinas de Alhendin Bigotes Solidarios &nbsp;·&nbsp; CIF G21862370</span>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="./index.html">Volver a la web</a>
+  </footer>
+
+</body>
+</html>
